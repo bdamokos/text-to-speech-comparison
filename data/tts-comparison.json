@@ -1,0 +1,3337 @@
+{
+  "title": "Text to speech comparison",
+  "generatedAt": "2026-06-30T21:59:31.642Z",
+  "notes": [
+    "Static comparison page generated from placeholder GOSVI prompt text.",
+    "Public data is sanitized: no API keys, generation IDs, raw headers, account exports, or local audit reports."
+  ],
+  "languageGroups": [
+    {
+      "id": "western",
+      "label": "Western Europe",
+      "languages": [
+        "en",
+        "fr",
+        "nl",
+        "ga",
+        "de"
+      ]
+    },
+    {
+      "id": "nordic-baltic",
+      "label": "Nordic & Baltic",
+      "languages": [
+        "da",
+        "fi",
+        "sv",
+        "et",
+        "lv",
+        "lt"
+      ]
+    },
+    {
+      "id": "central-eastern",
+      "label": "Central & Eastern",
+      "languages": [
+        "bg",
+        "hr",
+        "cs",
+        "hu",
+        "pl",
+        "ro",
+        "sk",
+        "sl"
+      ]
+    },
+    {
+      "id": "southern",
+      "label": "Southern Europe",
+      "languages": [
+        "el",
+        "it",
+        "mt",
+        "pt",
+        "es"
+      ]
+    }
+  ],
+  "providerGroups": [
+    {
+      "id": "local",
+      "label": "Local / OS",
+      "providers": [
+        "sapi",
+        "onecore",
+        "espeak-ng",
+        "espeak",
+        "macos-say",
+        "piper"
+      ]
+    },
+    {
+      "id": "elevenlabs",
+      "label": "ElevenLabs",
+      "providers": [
+        "elevenlabs-v3",
+        "elevenlabs-v2",
+        "elevenlabs-flash-v2-5"
+      ]
+    },
+    {
+      "id": "google",
+      "label": "Google",
+      "providers": [
+        "gemini-openrouter"
+      ]
+    },
+    {
+      "id": "xai",
+      "label": "xAI",
+      "providers": [
+        "grok-openrouter"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "code": "bg",
+      "language": "Bulgarian",
+      "culture": "bg-BG",
+      "sampleText": "Добре дошли. Моля, изберете език. Използвайте стрелките, за да разгледате акцентите, маршрутите и видеата.",
+      "characters": 106
+    },
+    {
+      "code": "hr",
+      "language": "Croatian",
+      "culture": "hr-HR",
+      "sampleText": "Dobro došli. Odaberite jezik. Koristite strelice za pregled istaknutih sadržaja, ruta i videozapisa.",
+      "characters": 100
+    },
+    {
+      "code": "cs",
+      "language": "Czech",
+      "culture": "cs-CZ",
+      "sampleText": "Vítejte. Vyberte jazyk. Pomocí šipek si prohlédněte zajímavosti, trasy a videa.",
+      "characters": 79
+    },
+    {
+      "code": "da",
+      "language": "Danish",
+      "culture": "da-DK",
+      "sampleText": "Velkommen. Vælg et sprog. Brug pilene til at udforske højdepunkter, ruter og videoer.",
+      "characters": 85
+    },
+    {
+      "code": "nl",
+      "language": "Dutch",
+      "culture": "nl-NL",
+      "sampleText": "Welkom. Kies een taal. Gebruik de pijlen om hoogtepunten, routes en video's te verkennen.",
+      "characters": 89
+    },
+    {
+      "code": "en",
+      "language": "English",
+      "culture": "en-GB",
+      "sampleText": "Welcome. Please select a language. Use the arrows to explore highlights, routes, and videos.",
+      "characters": 92
+    },
+    {
+      "code": "et",
+      "language": "Estonian",
+      "culture": "et-EE",
+      "sampleText": "Tere tulemast. Palun valige keel. Kasutage nooli, et uurida esiletõstetud sisu, marsruute ja videoid.",
+      "characters": 101
+    },
+    {
+      "code": "fi",
+      "language": "Finnish",
+      "culture": "fi-FI",
+      "sampleText": "Tervetuloa. Valitse kieli. Käytä nuolia tutkiaksesi kohokohtia, reittejä ja videoita.",
+      "characters": 85
+    },
+    {
+      "code": "fr",
+      "language": "French",
+      "culture": "fr-FR",
+      "sampleText": "Bienvenue. Veuillez choisir une langue. Utilisez les flèches pour explorer les temps forts, les itinéraires et les vidéos.",
+      "characters": 122
+    },
+    {
+      "code": "de",
+      "language": "German",
+      "culture": "de-DE",
+      "sampleText": "Willkommen. Bitte wählen Sie eine Sprache. Verwenden Sie die Pfeile, um Highlights, Routen und Videos zu erkunden.",
+      "characters": 114
+    },
+    {
+      "code": "el",
+      "language": "Greek",
+      "culture": "el-GR",
+      "sampleText": "Καλώς ήρθατε. Παρακαλώ επιλέξτε γλώσσα. Χρησιμοποιήστε τα βέλη για να εξερευνήσετε τα σημαντικά σημεία, τις διαδρομές και τα βίντεο.",
+      "characters": 132
+    },
+    {
+      "code": "hu",
+      "language": "Hungarian",
+      "culture": "hu-HU",
+      "sampleText": "Üdvözöljük. Kérjük, válasszon nyelvet. A nyilakkal fedezze fel a kiemelt tartalmakat, útvonalakat és videókat.",
+      "characters": 110
+    },
+    {
+      "code": "ga",
+      "language": "Irish",
+      "culture": "ga-IE",
+      "sampleText": "Fáilte. Roghnaigh teanga, le do thoil. Úsáid na saigheada chun buaicphointí, bealaí agus físeáin a iniúchadh.",
+      "characters": 109
+    },
+    {
+      "code": "it",
+      "language": "Italian",
+      "culture": "it-IT",
+      "sampleText": "Benvenuto. Seleziona una lingua. Usa le frecce per esplorare i contenuti in evidenza, gli itinerari e i video.",
+      "characters": 110
+    },
+    {
+      "code": "lv",
+      "language": "Latvian",
+      "culture": "lv-LV",
+      "sampleText": "Laipni lūdzam. Lūdzu, izvēlieties valodu. Izmantojiet bultiņas, lai izpētītu izcēlumus, maršrutus un video.",
+      "characters": 107
+    },
+    {
+      "code": "lt",
+      "language": "Lithuanian",
+      "culture": "lt-LT",
+      "sampleText": "Sveiki atvykę. Pasirinkite kalbą. Naudokite rodykles, kad peržiūrėtumėte svarbiausius akcentus, maršrutus ir vaizdo įrašus.",
+      "characters": 123
+    },
+    {
+      "code": "mt",
+      "language": "Maltese",
+      "culture": "mt-MT",
+      "sampleText": "Merħba. Jekk jogħġbok agħżel lingwa. Uża l-vleġeġ biex tesplora l-punti ewlenin, ir-rotot u l-vidjows.",
+      "characters": 102
+    },
+    {
+      "code": "pl",
+      "language": "Polish",
+      "culture": "pl-PL",
+      "sampleText": "Witamy. Wybierz język. Użyj strzałek, aby odkrywać najważniejsze treści, trasy i filmy.",
+      "characters": 87
+    },
+    {
+      "code": "pt",
+      "language": "Portuguese",
+      "culture": "pt-PT",
+      "sampleText": "Bem-vindo. Selecione um idioma. Use as setas para explorar destaques, percursos e vídeos.",
+      "characters": 89
+    },
+    {
+      "code": "ro",
+      "language": "Romanian",
+      "culture": "ro-RO",
+      "sampleText": "Bine ați venit. Vă rugăm să selectați o limbă. Folosiți săgețile pentru a explora punctele principale, traseele și videoclipurile.",
+      "characters": 130
+    },
+    {
+      "code": "sk",
+      "language": "Slovak",
+      "culture": "sk-SK",
+      "sampleText": "Vitajte. Vyberte jazyk. Pomocou šípok preskúmajte zaujímavosti, trasy a videá.",
+      "characters": 78
+    },
+    {
+      "code": "sl",
+      "language": "Slovenian",
+      "culture": "sl-SI",
+      "sampleText": "Dobrodošli. Izberite jezik. S puščicami raziščite poudarke, poti in videoposnetke.",
+      "characters": 82
+    },
+    {
+      "code": "es",
+      "language": "Spanish",
+      "culture": "es-ES",
+      "sampleText": "Bienvenido. Seleccione un idioma. Use las flechas para explorar los contenidos destacados, las rutas y los vídeos.",
+      "characters": 114
+    },
+    {
+      "code": "sv",
+      "language": "Swedish",
+      "culture": "sv-SE",
+      "sampleText": "Välkommen. Välj ett språk. Använd pilarna för att utforska höjdpunkter, rutter och videor.",
+      "characters": 90
+    }
+  ],
+  "providers": [
+    {
+      "id": "sapi",
+      "label": "Windows SAPI",
+      "group": "local",
+      "engine": "Windows desktop voices",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local OS voice",
+        "sampleCharacters": 2436
+      }
+    },
+    {
+      "id": "onecore",
+      "label": "Windows OneCore / Narrator",
+      "group": "local",
+      "engine": "Windows OneCore voices",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local OS voice",
+        "sampleCharacters": 2436
+      }
+    },
+    {
+      "id": "espeak-ng",
+      "label": "eSpeak NG",
+      "group": "local",
+      "engine": "Local open-source formant TTS",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local binary",
+        "sampleCharacters": 2436
+      }
+    },
+    {
+      "id": "espeak",
+      "label": "Legacy eSpeak",
+      "group": "local",
+      "engine": "Local legacy eSpeak",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local binary",
+        "sampleCharacters": 2252
+      }
+    },
+    {
+      "id": "macos-say",
+      "label": "macOS say",
+      "group": "local",
+      "engine": "Apple system voices",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local OS voice",
+        "sampleCharacters": 2017
+      }
+    },
+    {
+      "id": "piper",
+      "label": "Piper",
+      "group": "local",
+      "engine": "Local neural TTS",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local model",
+        "sampleCharacters": 1901
+      }
+    },
+    {
+      "id": "gemini-openrouter",
+      "label": "Gemini TTS",
+      "group": "google",
+      "engine": "OpenRouter google/gemini-3.1-flash-tts-preview",
+      "pricing": {
+        "kind": "observed",
+        "sampleCostUsd": 0.106684,
+        "usdPerMillionCharacters": 43.794745,
+        "source": "OpenRouter activity export",
+        "sampleCharacters": 2436
+      }
+    },
+    {
+      "id": "grok-openrouter",
+      "label": "Grok Voice TTS",
+      "group": "xai",
+      "engine": "OpenRouter x-ai/grok-voice-tts-1.0",
+      "pricing": {
+        "kind": "api",
+        "sampleCostUsd": 0.03654,
+        "usdPerMillionCharacters": 15,
+        "source": "OpenRouter generation endpoint",
+        "sampleCharacters": 2436
+      }
+    },
+    {
+      "id": "elevenlabs-v3",
+      "label": "ElevenLabs v3",
+      "group": "elevenlabs",
+      "engine": "Eleven v3, George voice",
+      "pricing": {
+        "kind": "api",
+        "sampleCostUsd": 0.2334,
+        "usdPerMillionCharacters": 100,
+        "source": "ElevenLabs API list pricing",
+        "sampleCharacters": 2334
+      }
+    },
+    {
+      "id": "elevenlabs-v2",
+      "label": "ElevenLabs multilingual v2",
+      "group": "elevenlabs",
+      "engine": "Eleven multilingual v2, George voice",
+      "pricing": {
+        "kind": "api",
+        "sampleCostUsd": 0.1702,
+        "usdPerMillionCharacters": 100,
+        "source": "ElevenLabs API list pricing",
+        "sampleCharacters": 1702
+      }
+    },
+    {
+      "id": "elevenlabs-flash-v2-5",
+      "label": "ElevenLabs Flash v2.5",
+      "group": "elevenlabs",
+      "engine": "Eleven Flash v2.5, George voice",
+      "pricing": {
+        "kind": "api",
+        "sampleCostUsd": 0.0453,
+        "usdPerMillionCharacters": 50,
+        "source": "ElevenLabs API list pricing",
+        "sampleCharacters": 1812
+      }
+    }
+  ],
+  "samples": [
+    {
+      "lang": "bg",
+      "provider": "sapi",
+      "status": "missing",
+      "file": null,
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "Windows SAPI MP3 export was invalid for this sample.",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-hr.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-cs.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-da.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-nl.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-en.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-et.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-fi.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-fr.mp3",
+      "voice": "Microsoft Hortense Desktop",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-de.mp3",
+      "voice": "Microsoft Hedda Desktop",
+      "reason": "configured GOSVI voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "sapi",
+      "status": "missing",
+      "file": null,
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "Windows SAPI MP3 export was invalid for this sample.",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-hu.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-ga.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-it.mp3",
+      "voice": "Microsoft Elsa Desktop",
+      "reason": "configured GOSVI voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-lv.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-lt.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-mt.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-pl.mp3",
+      "voice": "Microsoft Paulina Desktop",
+      "reason": "configured GOSVI voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-pt.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-ro.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-sk.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-sl.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-es.mp3",
+      "voice": "Microsoft Helena Desktop",
+      "reason": "configured GOSVI voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "sapi",
+      "status": "ok",
+      "file": "audio/sapi-sv.mp3",
+      "voice": "Microsoft Hazel Desktop",
+      "reason": "fallback default; configured voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-bg.mp3",
+      "voice": "Microsoft Ivan",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-hr.mp3",
+      "voice": "Microsoft Matej",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-cs.mp3",
+      "voice": "Microsoft Jakub",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-da.mp3",
+      "voice": "Microsoft Helle",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-nl.mp3",
+      "voice": "Microsoft Frank",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-en.mp3",
+      "voice": "Microsoft George",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-et.mp3",
+      "voice": "Microsoft George",
+      "reason": "fallback default; matching OneCore voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-fi.mp3",
+      "voice": "Microsoft Heidi",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-fr.mp3",
+      "voice": "Microsoft Hortense",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-de.mp3",
+      "voice": "Microsoft Stefan",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-el.mp3",
+      "voice": "Microsoft Stefanos",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-hu.mp3",
+      "voice": "Microsoft Szabolcs",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-ga.mp3",
+      "voice": "Microsoft George",
+      "reason": "fallback default; matching OneCore voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-it.mp3",
+      "voice": "Microsoft Cosimo",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-lv.mp3",
+      "voice": "Microsoft George",
+      "reason": "fallback default; matching OneCore voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-lt.mp3",
+      "voice": "Microsoft George",
+      "reason": "fallback default; matching OneCore voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-mt.mp3",
+      "voice": "Microsoft George",
+      "reason": "fallback default; matching OneCore voice missing",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-pl.mp3",
+      "voice": "Microsoft Paulina",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-pt.mp3",
+      "voice": "Microsoft Helia",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-ro.mp3",
+      "voice": "Microsoft Andrei",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-sk.mp3",
+      "voice": "Microsoft Filip",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-sl.mp3",
+      "voice": "Microsoft Lado",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-es.mp3",
+      "voice": "Microsoft Pablo",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "onecore",
+      "status": "ok",
+      "file": "audio/onecore-sv.mp3",
+      "voice": "Microsoft Bengt",
+      "reason": "matching culture",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-bg.mp3",
+      "voice": "bg",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-hr.mp3",
+      "voice": "hr",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-cs.mp3",
+      "voice": "cs",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-da.mp3",
+      "voice": "da",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-nl.mp3",
+      "voice": "nl",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-en.mp3",
+      "voice": "en-gb",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-et.mp3",
+      "voice": "et",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-fi.mp3",
+      "voice": "fi",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-fr.mp3",
+      "voice": "fr-fr",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-de.mp3",
+      "voice": "de",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-el.mp3",
+      "voice": "el",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-hu.mp3",
+      "voice": "hu",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-ga.mp3",
+      "voice": "ga",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-it.mp3",
+      "voice": "it",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-lv.mp3",
+      "voice": "lv",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-lt.mp3",
+      "voice": "lt",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-mt.mp3",
+      "voice": "mt",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-pl.mp3",
+      "voice": "pl",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-pt.mp3",
+      "voice": "pt",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-ro.mp3",
+      "voice": "ro",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-sk.mp3",
+      "voice": "sk",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-sl.mp3",
+      "voice": "sl",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-es.mp3",
+      "voice": "es",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "espeak-ng",
+      "status": "ok",
+      "file": "audio/espeak-ng-sv.mp3",
+      "voice": "sv",
+      "reason": "eSpeak NG local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-bg.mp3",
+      "voice": "bg",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-hr.mp3",
+      "voice": "hr",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-cs.mp3",
+      "voice": "cs",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-da.mp3",
+      "voice": "da",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-nl.mp3",
+      "voice": "nl",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-en.mp3",
+      "voice": "en-gb",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-et.mp3",
+      "voice": "et",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-fi.mp3",
+      "voice": "fi",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-fr.mp3",
+      "voice": "fr-fr",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-de.mp3",
+      "voice": "de",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-el.mp3",
+      "voice": "el",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-hu.mp3",
+      "voice": "hu",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-ga.mp3",
+      "voice": "ga",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-it.mp3",
+      "voice": "it",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-lv.mp3",
+      "voice": "lv",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-lt.mp3",
+      "voice": "lt",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "espeak",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No legacy eSpeak voice code available on this build",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-pl.mp3",
+      "voice": "pl",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-pt.mp3",
+      "voice": "pt-pt",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-ro.mp3",
+      "voice": "ro",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-sk.mp3",
+      "voice": "sk",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "espeak",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No legacy eSpeak voice code available on this build",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-es.mp3",
+      "voice": "es",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "espeak",
+      "status": "ok",
+      "file": "audio/espeak-sv.mp3",
+      "voice": "sv",
+      "reason": "legacy eSpeak local voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-bg.mp3",
+      "voice": "Daria",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-hr.mp3",
+      "voice": "Lana",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-cs.mp3",
+      "voice": "Zuzana",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-da.mp3",
+      "voice": "Sara",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-nl.mp3",
+      "voice": "Xander",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-en.mp3",
+      "voice": "Daniel",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "macos-say",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No installed macOS voice for this target language on this machine",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-fi.mp3",
+      "voice": "Satu",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-fr.mp3",
+      "voice": "Thomas",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-de.mp3",
+      "voice": "Anna",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-el.mp3",
+      "voice": "Melina",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-hu.mp3",
+      "voice": "Tünde",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "macos-say",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No installed macOS voice for this target language on this machine",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-it.mp3",
+      "voice": "Alice",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "macos-say",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No installed macOS voice for this target language on this machine",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-lt.mp3",
+      "voice": "Ona",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "macos-say",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No installed macOS voice for this target language on this machine",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-pl.mp3",
+      "voice": "Zosia",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-pt.mp3",
+      "voice": "Joana",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-ro.mp3",
+      "voice": "Ioana",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-sk.mp3",
+      "voice": "Laura",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-sl.mp3",
+      "voice": "Tina",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-es.mp3",
+      "voice": "Mónica",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "macos-say",
+      "status": "ok",
+      "file": "audio/macos-say-sv.mp3",
+      "voice": "Alva",
+      "reason": "installed macOS say voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-bg.mp3",
+      "voice": "bg_BG-dimitar-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "piper",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No Piper model available for this target language in rhasspy/piper-voices",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-cs.mp3",
+      "voice": "cs_CZ-jirka-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-da.mp3",
+      "voice": "da_DK-talesyntese-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-nl.mp3",
+      "voice": "nl_NL-pim-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-en.mp3",
+      "voice": "en_GB-cori-high",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "piper",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No Piper model available for this target language in rhasspy/piper-voices",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-fi.mp3",
+      "voice": "fi_FI-harri-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-fr.mp3",
+      "voice": "fr_FR-siwis-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-de.mp3",
+      "voice": "de_DE-thorsten-high",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-el.mp3",
+      "voice": "el_GR-rapunzelina-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-hu.mp3",
+      "voice": "hu_HU-anna-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "piper",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No Piper model available for this target language in rhasspy/piper-voices",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-it.mp3",
+      "voice": "it_IT-paola-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-lv.mp3",
+      "voice": "lv_LV-aivars-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "piper",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No Piper model available for this target language in rhasspy/piper-voices",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "piper",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "No Piper model available for this target language in rhasspy/piper-voices",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-pl.mp3",
+      "voice": "pl_PL-gosia-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-pt.mp3",
+      "voice": "pt_PT-tugão-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-ro.mp3",
+      "voice": "ro_RO-mihai-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-sk.mp3",
+      "voice": "sk_SK-lili-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-sl.mp3",
+      "voice": "sl_SI-artur-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-es.mp3",
+      "voice": "es_ES-sharvard-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "piper",
+      "status": "ok",
+      "file": "audio/piper-sv.mp3",
+      "voice": "sv_SE-lisa-medium",
+      "reason": "Piper local neural voice",
+      "model": null,
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-bg.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004459",
+      "model": null,
+      "costUsd": 0.004459,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-hr.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004351",
+      "model": null,
+      "costUsd": 0.004351,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-cs.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.003830",
+      "model": null,
+      "costUsd": 0.00383,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-da.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.003748",
+      "model": null,
+      "costUsd": 0.003748,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-nl.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.003965",
+      "model": null,
+      "costUsd": 0.003965,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-en.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.003645",
+      "model": null,
+      "costUsd": 0.003645,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-et.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004534",
+      "model": null,
+      "costUsd": 0.004534,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-fi.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004193",
+      "model": null,
+      "costUsd": 0.004193,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-fr.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004145",
+      "model": null,
+      "costUsd": 0.004145,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-de.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004547",
+      "model": null,
+      "costUsd": 0.004547,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-el.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.005174",
+      "model": null,
+      "costUsd": 0.005174,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-hu.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004988",
+      "model": null,
+      "costUsd": 0.004988,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-ga.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004522",
+      "model": null,
+      "costUsd": 0.004522,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-it.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004511",
+      "model": null,
+      "costUsd": 0.004511,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-lv.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.003906",
+      "model": null,
+      "costUsd": 0.003906,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-lt.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.005492",
+      "model": null,
+      "costUsd": 0.005492,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-mt.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004850",
+      "model": null,
+      "costUsd": 0.00485,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-pl.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004268",
+      "model": null,
+      "costUsd": 0.004268,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-pt.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004203",
+      "model": null,
+      "costUsd": 0.004203,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-ro.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.005198",
+      "model": null,
+      "costUsd": 0.005198,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-sk.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004650",
+      "model": null,
+      "costUsd": 0.00465,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-sl.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.003851",
+      "model": null,
+      "costUsd": 0.003851,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-es.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004704",
+      "model": null,
+      "costUsd": 0.004704,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "gemini-openrouter",
+      "status": "ok",
+      "file": "audio/gemini-openrouter-sv.mp3",
+      "voice": "Kore",
+      "reason": "OpenRouter Gemini TTS; cost $0.004950",
+      "model": null,
+      "costUsd": 0.00495,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-bg.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 106",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 106
+    },
+    {
+      "lang": "hr",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-hr.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 100",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 100
+    },
+    {
+      "lang": "cs",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-cs.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 79",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 79
+    },
+    {
+      "lang": "da",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-da.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 85",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 85
+    },
+    {
+      "lang": "nl",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-nl.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 89",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 89
+    },
+    {
+      "lang": "en",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-en.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 92",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 92
+    },
+    {
+      "lang": "et",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-et.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 101",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 101
+    },
+    {
+      "lang": "fi",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-fi.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 85",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 85
+    },
+    {
+      "lang": "fr",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-fr.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 122",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 122
+    },
+    {
+      "lang": "de",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-de.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 114",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 114
+    },
+    {
+      "lang": "el",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-el.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 132",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 132
+    },
+    {
+      "lang": "hu",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-hu.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 110",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 110
+    },
+    {
+      "lang": "ga",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-ga.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 109",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 109
+    },
+    {
+      "lang": "it",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-it.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 110",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 110
+    },
+    {
+      "lang": "lv",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-lv.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 107",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 107
+    },
+    {
+      "lang": "lt",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-lt.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 123",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 123
+    },
+    {
+      "lang": "mt",
+      "provider": "elevenlabs-v3",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_v3 does not list mt as a supported language",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-pl.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 87",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 87
+    },
+    {
+      "lang": "pt",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-pt.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 89",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 89
+    },
+    {
+      "lang": "ro",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-ro.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 130",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 130
+    },
+    {
+      "lang": "sk",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-sk.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 78",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 78
+    },
+    {
+      "lang": "sl",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-sl.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 82",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 82
+    },
+    {
+      "lang": "es",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-es.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 114",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 114
+    },
+    {
+      "lang": "sv",
+      "provider": "elevenlabs-v3",
+      "status": "ok",
+      "file": "audio/elevenlabs-v3-sv.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs v3; character cost 90",
+      "model": "eleven_v3",
+      "costUsd": null,
+      "characterCost": 90
+    },
+    {
+      "lang": "bg",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-bg.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 106",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 106
+    },
+    {
+      "lang": "hr",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-hr.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 100",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 100
+    },
+    {
+      "lang": "cs",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-cs.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 79",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 79
+    },
+    {
+      "lang": "da",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-da.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 85",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 85
+    },
+    {
+      "lang": "nl",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-nl.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 89",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 89
+    },
+    {
+      "lang": "en",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-en.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 92",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 92
+    },
+    {
+      "lang": "et",
+      "provider": "elevenlabs-v2",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_multilingual_v2 does not list et as a supported language",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-fi.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 85",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 85
+    },
+    {
+      "lang": "fr",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-fr.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 122",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 122
+    },
+    {
+      "lang": "de",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-de.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 114",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 114
+    },
+    {
+      "lang": "el",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-el.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 132",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 132
+    },
+    {
+      "lang": "hu",
+      "provider": "elevenlabs-v2",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_multilingual_v2 does not list hu as a supported language",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "elevenlabs-v2",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_multilingual_v2 does not list ga as a supported language",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-it.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 110",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 110
+    },
+    {
+      "lang": "lv",
+      "provider": "elevenlabs-v2",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_multilingual_v2 does not list lv as a supported language",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "elevenlabs-v2",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_multilingual_v2 does not list lt as a supported language",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "elevenlabs-v2",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_multilingual_v2 does not list mt as a supported language",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-pl.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 87",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 87
+    },
+    {
+      "lang": "pt",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-pt.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 89",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 89
+    },
+    {
+      "lang": "ro",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-ro.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 130",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 130
+    },
+    {
+      "lang": "sk",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-sk.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 78",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 78
+    },
+    {
+      "lang": "sl",
+      "provider": "elevenlabs-v2",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_multilingual_v2 does not list sl as a supported language",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-es.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 114",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 114
+    },
+    {
+      "lang": "sv",
+      "provider": "elevenlabs-v2",
+      "status": "ok",
+      "file": "audio/elevenlabs-v2-sv.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs multilingual v2; character cost 90",
+      "model": "eleven_multilingual_v2",
+      "costUsd": null,
+      "characterCost": 90
+    },
+    {
+      "lang": "bg",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-bg.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 53",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 53
+    },
+    {
+      "lang": "hr",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-hr.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 50",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 50
+    },
+    {
+      "lang": "cs",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-cs.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 40",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 40
+    },
+    {
+      "lang": "da",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-da.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 43",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 43
+    },
+    {
+      "lang": "nl",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-nl.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 44",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 44
+    },
+    {
+      "lang": "en",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-en.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 46",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 46
+    },
+    {
+      "lang": "et",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_flash_v2_5 does not list et as a supported language",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-fi.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 43",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 43
+    },
+    {
+      "lang": "fr",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-fr.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 61",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 61
+    },
+    {
+      "lang": "de",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-de.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 57",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 57
+    },
+    {
+      "lang": "el",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-el.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 66",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 66
+    },
+    {
+      "lang": "hu",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-hu.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 55",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 55
+    },
+    {
+      "lang": "ga",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_flash_v2_5 does not list ga as a supported language",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-it.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 55",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 55
+    },
+    {
+      "lang": "lv",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_flash_v2_5 does not list lv as a supported language",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_flash_v2_5 does not list lt as a supported language",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_flash_v2_5 does not list mt as a supported language",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-pl.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 43",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 43
+    },
+    {
+      "lang": "pt",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-pt.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 44",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 44
+    },
+    {
+      "lang": "ro",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-ro.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 65",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 65
+    },
+    {
+      "lang": "sk",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-sk.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 39",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 39
+    },
+    {
+      "lang": "sl",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "missing",
+      "file": null,
+      "voice": "George",
+      "reason": "eleven_flash_v2_5 does not list sl as a supported language",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-es.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 57",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 57
+    },
+    {
+      "lang": "sv",
+      "provider": "elevenlabs-flash-v2-5",
+      "status": "ok",
+      "file": "audio/elevenlabs-flash-v2-5-sv.mp3",
+      "voice": "George",
+      "reason": "ElevenLabs Flash v2.5; character cost 45",
+      "model": "eleven_flash_v2_5",
+      "costUsd": null,
+      "characterCost": 45
+    },
+    {
+      "lang": "bg",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-bg.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001590",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00159,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-hr.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001500",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.0015,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-cs.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001185",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001185,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-da.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001275",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001275,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-nl.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001335",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001335,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-en.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001380",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00138,
+      "characterCost": null
+    },
+    {
+      "lang": "et",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-et.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001515",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001515,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-fi.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001275",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001275,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-fr.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001830",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00183,
+      "characterCost": null
+    },
+    {
+      "lang": "de",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-de.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001710",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00171,
+      "characterCost": null
+    },
+    {
+      "lang": "el",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-el.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001980",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00198,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-hu.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001650",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00165,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-ga.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001635",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001635,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-it.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001650",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00165,
+      "characterCost": null
+    },
+    {
+      "lang": "lv",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-lv.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001605",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001605,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-lt.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001845",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001845,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-mt.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001530",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00153,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-pl.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001305",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001305,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-pt.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001335",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.001335,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-ro.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001950",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00195,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-sk.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001170",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00117,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-sl.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001230",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00123,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-es.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001710",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00171,
+      "characterCost": null
+    },
+    {
+      "lang": "sv",
+      "provider": "grok-openrouter",
+      "status": "ok",
+      "file": "audio/grok-openrouter-sv.mp3",
+      "voice": "Eve",
+      "reason": "OpenRouter Grok Voice TTS; cost $0.001350",
+      "model": "x-ai/grok-voice-tts-1.0",
+      "costUsd": 0.00135,
+      "characterCost": null
+    }
+  ],
+  "costs": {
+    "google": {
+      "model": "google/gemini-3.1-flash-tts-preview",
+      "sampleCostUsd": 0.106684,
+      "sampleCharacters": 2436,
+      "usdPerMillionCharacters": 43.794745,
+      "source": "Observed OpenRouter batch cost"
+    },
+    "xai": {
+      "model": "x-ai/grok-voice-tts-1.0",
+      "sampleCostUsd": 0.03654,
+      "sampleCharacters": 2436,
+      "usdPerMillionCharacters": 15,
+      "source": "OpenRouter generation endpoint"
+    },
+    "elevenLabs": {
+      "sampleCostUsd": 0.4489,
+      "sampleCharacters": 4942,
+      "source": "ElevenLabs API list pricing"
+    }
+  }
+}

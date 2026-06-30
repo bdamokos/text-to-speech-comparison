@@ -1,0 +1,35 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Secret or provider-account material
+*api-key*
+*apikey*
+*secret*
+*token*
+*credential*
+*generation*
+*activity*.csv
+*headers*
+local-audit/
+audit/
+tmp/
+
+# Raw or bulky generation artifacts not needed for the static page
+*.pcm
+*.wav
+*.aiff
+*.flac
+piper-models/
+.venv*/
+node_modules/
+
+# Local development output
+.cache/
+.parcel-cache/
+dist/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text to speech comparison</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f5ef;
+      --surface: #fffdf7;
+      --ink: #141813;
+      --muted: #5e685f;
+      --line: #cbd2c4;
+      --forest: #1f5f52;
+      --blue: #244f7a;
+      --rust: #a3472f;
+      --gold: #b78a2a;
+      --shadow: 0 14px 34px rgba(38, 45, 34, .11);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: 8px;
+      transform: translateY(-140%);
+      background: var(--ink);
+      color: var(--surface);
+      padding: 8px 12px;
+      border-radius: 6px;
+      z-index: 20;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(31, 95, 82, .08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(36, 79, 122, .07) 1px, transparent 1px),
+        var(--paper);
+      background-size: 32px 32px;
+      font: 15px/1.45 ui-sans-serif, "Segoe UI", Verdana, sans-serif;
+    }
+
+    header {
+      padding: 28px clamp(18px, 4vw, 52px) 20px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(244, 245, 239, .94);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      margin: 0;
+      font: 700 clamp(30px, 5vw, 58px)/.95 Georgia, "Times New Roman", serif;
+      letter-spacing: 0;
+    }
+
+    .subhead {
+      max-width: 880px;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(260px, 330px) minmax(0, 1fr);
+      gap: 20px;
+      padding: 22px clamp(16px, 3vw, 48px) 50px;
+    }
+
+    aside {
+      align-self: start;
+      position: sticky;
+      top: 132px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .panel {
+      background: rgba(255, 253, 247, .9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-head {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    h2, h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h2 { font-size: 17px; }
+    h3 { font-size: 15px; }
+
+    .filter-body {
+      padding: 12px 14px 14px;
+      display: grid;
+      gap: 14px;
+      max-height: 38vh;
+      overflow: auto;
+    }
+
+    .group {
+      display: grid;
+      gap: 8px;
+    }
+
+    .check {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+      color: var(--muted);
+    }
+
+    .check strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    input[type="checkbox"] {
+      margin: 3px 0 0;
+      accent-color: var(--forest);
+    }
+
+    .children {
+      display: grid;
+      gap: 6px;
+      padding-left: 26px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
+      min-height: 36px;
+      padding: 0 12px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid rgba(36, 79, 122, .45);
+      outline-offset: 2px;
+    }
+
+    button.active {
+      background: var(--ink);
+      color: var(--surface);
+      border-color: var(--ink);
+    }
+
+    .view { display: none; }
+    .view.active { display: block; }
+
+    .language-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    article.language {
+      background: rgba(255, 253, 247, .92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .language-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .56), rgba(255, 255, 255, 0));
+    }
+
+    .code {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .sample-text {
+      margin: 0;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+
+    .char-count {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .samples {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+      padding: 14px;
+    }
+
+    .sample-card {
+      border: 1px solid rgba(203, 210, 196, .9);
+      border-radius: 7px;
+      padding: 11px;
+      background: rgba(244, 245, 239, .55);
+      min-width: 0;
+    }
+
+    .sample-card.missing {
+      border-style: dashed;
+      background: rgba(255, 253, 247, .58);
+    }
+
+    .provider-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .provider-line strong {
+      color: var(--forest);
+      overflow-wrap: anywhere;
+    }
+
+    .sample-card.missing .provider-line strong {
+      color: var(--rust);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 7px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    audio {
+      width: 100%;
+      height: 34px;
+    }
+
+    .meta {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .cost-layout {
+      display: grid;
+      gap: 16px;
+    }
+
+    .calculator {
+      padding: 16px;
+      display: grid;
+      grid-template-columns: minmax(220px, 340px) repeat(3, minmax(150px, 1fr));
+      gap: 12px;
+      align-items: end;
+    }
+
+    label.input-label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    input[type="number"] {
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
+      padding: 0 12px;
+      font: inherit;
+      width: 100%;
+    }
+
+    .metric {
+      border-left: 3px solid var(--forest);
+      padding-left: 12px;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: clamp(20px, 2.4vw, 30px);
+      line-height: 1.1;
+      margin-top: 2px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 253, 247, .9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      background: rgba(244, 245, 239, .72);
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .empty {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      color: var(--muted);
+      background: rgba(255, 253, 247, .75);
+    }
+
+    @media (max-width: 980px) {
+      main { grid-template-columns: 1fr; }
+      aside { position: static; }
+      .filter-body { max-height: none; }
+      .calculator { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      header { position: static; }
+      main { padding-inline: 14px; }
+      .language-head, .calculator { grid-template-columns: 1fr; }
+      .char-count { white-space: normal; }
+      th:nth-child(3), td:nth-child(3) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to samples</a>
+  <header>
+    <h1>Text to speech comparison</h1>
+    <div class="subhead">A static comparison of local, OS, and API text-to-speech providers across the 24 official EU languages, using the same short placeholder prompt in each language.</div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <aside aria-label="Comparison filters">
+      <section class="panel" aria-labelledby="providers-heading">
+        <div class="panel-head">
+          <h2 id="providers-heading">Providers</h2>
+          <button id="providers-all" type="button">All</button>
+        </div>
+        <div class="filter-body" id="provider-filters" role="group" aria-labelledby="providers-heading"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="languages-heading">
+        <div class="panel-head">
+          <h2 id="languages-heading">Languages</h2>
+          <button id="languages-all" type="button">All</button>
+        </div>
+        <div class="filter-body" id="language-filters" role="group" aria-labelledby="languages-heading"></div>
+      </section>
+    </aside>
+
+    <section aria-label="Comparison results">
+      <nav class="tabs" role="tablist" aria-label="Comparison views">
+        <button class="active" type="button" data-tab="samples" role="tab" aria-selected="true" aria-controls="samples-view" id="samples-tab">Samples</button>
+        <button type="button" data-tab="costs" role="tab" aria-selected="false" aria-controls="costs-view" id="costs-tab">Costs</button>
+      </nav>
+
+      <p class="sr-only" id="result-summary" aria-live="polite"></p>
+
+      <section class="view active" id="samples-view" role="tabpanel" aria-labelledby="samples-tab">
+        <div class="language-list" id="language-list"></div>
+      </section>
+
+      <section class="view" id="costs-view" role="tabpanel" aria-labelledby="costs-tab" hidden>
+        <div class="cost-layout">
+          <section class="panel calculator">
+            <label class="input-label">
+              Characters to estimate
+              <input id="character-input" type="number" min="0" step="1000" value="1000000">
+            </label>
+            <div class="metric" role="status" aria-live="polite"><span id="sample-cost-label">Selected sample set</span><strong id="sample-cost" aria-labelledby="sample-cost-label">$0.00</strong></div>
+            <div class="metric" role="status" aria-live="polite"><span id="calculator-cost-label">Calculator total</span><strong id="calculator-cost" aria-labelledby="calculator-cost-label">$0.00</strong></div>
+            <div class="metric"><span id="coverage-count-label">Playable samples</span><strong id="coverage-count" aria-labelledby="coverage-count-label">0</strong></div>
+          </section>
+          <div id="cost-table"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const state = {
+      data: null,
+      providers: new Set(),
+      languages: new Set(),
+      tab: "samples"
+    };
+
+    const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 4 });
+    const whole = new Intl.NumberFormat("en-US");
+
+    function byId(list) {
+      return Object.fromEntries(list.map(item => [item.id || item.code, item]));
+    }
+
+    function sampleFor(lang, provider) {
+      return state.data.samples.find(sample => sample.lang === lang && sample.provider === provider);
+    }
+
+    function selectedProviders() {
+      return state.data.providers.filter(provider => state.providers.has(provider.id));
+    }
+
+    function selectedLanguages() {
+      return state.data.languages.filter(language => state.languages.has(language.code));
+    }
+
+    function providerRate(provider) {
+      return Number(provider.pricing?.usdPerMillionCharacters || 0);
+    }
+
+    function sampleCost(sample, provider, language) {
+      if (!sample || sample.status !== "ok") return 0;
+      if (sample.costUsd != null) return Number(sample.costUsd);
+      if (sample.characterCost != null) return Number(sample.characterCost) / 1_000_000 * providerRate(provider);
+      return Number(language.characters || 0) / 1_000_000 * providerRate(provider);
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+    }
+
+    function toggleSet(target, values, checked) {
+      for (const value of values) {
+        if (checked) target.add(value);
+        else target.delete(value);
+      }
+    }
+
+    function renderFilters() {
+      const providerById = byId(state.data.providers);
+      const langByCode = byId(state.data.languages);
+      document.getElementById("provider-filters").innerHTML = state.data.providerGroups.map(group => {
+        const checked = group.providers.every(id => state.providers.has(id));
+        const partial = !checked && group.providers.some(id => state.providers.has(id));
+        const children = group.providers.map(id => {
+          const provider = providerById[id];
+          return `<label class="check"><input type="checkbox" data-provider="${escapeHtml(id)}" aria-label="Provider ${escapeHtml(provider.label)}" ${state.providers.has(id) ? "checked" : ""}><span>${escapeHtml(provider.label)}</span></label>`;
+        }).join("");
+        return `<div class="group"><label class="check"><input type="checkbox" data-provider-group="${escapeHtml(group.id)}" data-values="${escapeHtml(group.providers.join(","))}" aria-label="Provider group ${escapeHtml(group.label)}" ${checked ? "checked" : ""} ${partial ? "data-partial=\"true\"" : ""}><span><strong>${escapeHtml(group.label)}</strong></span></label><div class="children">${children}</div></div>`;
+      }).join("");
+
+      document.getElementById("language-filters").innerHTML = state.data.languageGroups.map(group => {
+        const checked = group.languages.every(code => state.languages.has(code));
+        const partial = !checked && group.languages.some(code => state.languages.has(code));
+        const children = group.languages.map(code => {
+          const language = langByCode[code];
+          return `<label class="check"><input type="checkbox" data-language="${escapeHtml(code)}" aria-label="Language ${escapeHtml(language.language)}" ${state.languages.has(code) ? "checked" : ""}><span>${escapeHtml(language.language)} <span class="code">${escapeHtml(code)}</span></span></label>`;
+        }).join("");
+        return `<div class="group"><label class="check"><input type="checkbox" data-language-group="${escapeHtml(group.id)}" data-values="${escapeHtml(group.languages.join(","))}" aria-label="Language group ${escapeHtml(group.label)}" ${checked ? "checked" : ""} ${partial ? "data-partial=\"true\"" : ""}><span><strong>${escapeHtml(group.label)}</strong></span></label><div class="children">${children}</div></div>`;
+      }).join("");
+
+      for (const box of document.querySelectorAll("[data-partial]")) box.indeterminate = true;
+    }
+
+    function renderSamples() {
+      const providers = selectedProviders();
+      const languages = selectedLanguages();
+      const providerById = byId(state.data.providers);
+      const list = document.getElementById("language-list");
+      if (!providers.length || !languages.length) {
+        list.innerHTML = '<div class="empty">Select at least one provider and one language.</div>';
+        document.getElementById("result-summary").textContent = "No samples shown. Select at least one provider and one language.";
+        return;
+      }
+
+      const playableCount = languages.reduce((total, language) => total + providers.filter(provider => sampleFor(language.code, provider.id)?.status === "ok").length, 0);
+      document.getElementById("result-summary").textContent = `${whole.format(languages.length)} languages and ${whole.format(providers.length)} providers selected, with ${whole.format(playableCount)} playable samples.`;
+
+      list.innerHTML = languages.map(language => {
+        const cards = providers.map(provider => {
+          const sample = sampleFor(language.code, provider.id);
+          const isOk = sample?.status === "ok";
+          const cost = sampleCost(sample, provider, language);
+          const badge = isOk ? (cost ? money.format(cost) : "$0") : "Unavailable";
+          const body = isOk
+            ? `<audio controls preload="metadata" src="${escapeHtml(sample.file)}" aria-label="${escapeHtml(provider.label)} sample for ${escapeHtml(language.language)}"></audio>`
+            : `<div class="meta">${escapeHtml(sample?.reason || "No sample available for this provider and language.")}</div>`;
+          const metaParts = [sample?.voice, provider.engine].filter(Boolean);
+          return `<div class="sample-card ${isOk ? "" : "missing"}"><div class="provider-line"><strong>${escapeHtml(providerById[provider.id].label)}</strong><span class="badge">${escapeHtml(badge)}</span></div>${body}<div class="meta">${escapeHtml(metaParts.join(" · "))}</div></div>`;
+        }).join("");
+        return `<article class="language"><div class="language-head"><div><h2>${escapeHtml(language.language)} <span class="code">${escapeHtml(language.code)}</span></h2><p class="sample-text">${escapeHtml(language.sampleText)}</p></div><div class="char-count">${whole.format(language.characters)} chars</div></div><div class="samples">${cards}</div></article>`;
+      }).join("");
+    }
+
+    function renderCosts() {
+      const providers = selectedProviders();
+      const languages = selectedLanguages();
+      const characters = Math.max(0, Number(document.getElementById("character-input").value || 0));
+      const rows = providers.map(provider => {
+        let sampleTotal = 0;
+        let playable = 0;
+        for (const language of languages) {
+          const sample = sampleFor(language.code, provider.id);
+          if (sample?.status === "ok") playable += 1;
+          sampleTotal += sampleCost(sample, provider, language);
+        }
+        const millionRate = providerRate(provider);
+        return {
+          provider,
+          playable,
+          sampleTotal,
+          millionRate,
+          calculatorCost: characters / 1_000_000 * millionRate
+        };
+      });
+
+      const sampleTotal = rows.reduce((sum, row) => sum + row.sampleTotal, 0);
+      const calculatorTotal = rows.reduce((sum, row) => sum + row.calculatorCost, 0);
+      const playableTotal = rows.reduce((sum, row) => sum + row.playable, 0);
+      document.getElementById("sample-cost").textContent = money.format(sampleTotal);
+      document.getElementById("calculator-cost").textContent = money.format(calculatorTotal);
+      document.getElementById("coverage-count").textContent = whole.format(playableTotal);
+
+      document.getElementById("cost-table").innerHTML = `<table><caption class="sr-only">Cost estimates for selected providers and languages</caption><thead><tr><th scope="col">Provider</th><th scope="col">Cost basis</th><th scope="col" class="num">Playable</th><th scope="col" class="num">Selected sample</th><th scope="col" class="num">Per 1M chars</th><th scope="col" class="num">Calculator</th></tr></thead><tbody>${rows.map(row => `<tr><th scope="row"><strong>${escapeHtml(row.provider.label)}</strong><div class="meta">${escapeHtml(row.provider.engine)}</div></th><td>${escapeHtml(row.provider.pricing?.source || "")}</td><td class="num">${whole.format(row.playable)}</td><td class="num">${money.format(row.sampleTotal)}</td><td class="num">${money.format(row.millionRate)}</td><td class="num">${money.format(row.calculatorCost)}</td></tr>`).join("")}</tbody></table>`;
+    }
+
+    function activateTab(button) {
+      state.tab = button.dataset.tab;
+      document.querySelectorAll("[data-tab]").forEach(tab => {
+        const active = tab.dataset.tab === state.tab;
+        tab.classList.toggle("active", active);
+        tab.setAttribute("aria-selected", String(active));
+      });
+      document.querySelectorAll(".view").forEach(view => {
+        const active = view.id === `${state.tab}-view`;
+        view.classList.toggle("active", active);
+        view.hidden = !active;
+      });
+    }
+
+    function render() {
+      renderFilters();
+      renderSamples();
+      renderCosts();
+    }
+
+    document.addEventListener("change", event => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement)) return;
+      if (target.dataset.provider) state.providers[target.checked ? "add" : "delete"](target.dataset.provider);
+      if (target.dataset.language) state.languages[target.checked ? "add" : "delete"](target.dataset.language);
+      if (target.dataset.providerGroup) toggleSet(state.providers, target.dataset.values.split(","), target.checked);
+      if (target.dataset.languageGroup) toggleSet(state.languages, target.dataset.values.split(","), target.checked);
+      render();
+    });
+
+    document.addEventListener("click", event => {
+      const button = event.target.closest("button");
+      if (!button) return;
+      if (button.dataset.tab) {
+        activateTab(button);
+      }
+      if (button.id === "providers-all") {
+        state.providers = new Set(state.data.providers.map(provider => provider.id));
+        render();
+      }
+      if (button.id === "languages-all") {
+        state.languages = new Set(state.data.languages.map(language => language.code));
+        render();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      const button = event.target.closest("[role='tab']");
+      if (!button) return;
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        activateTab(button);
+      }
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+        const tabs = [...document.querySelectorAll("[role='tab']")];
+        const current = tabs.indexOf(button);
+        const offset = event.key === "ArrowRight" ? 1 : -1;
+        const next = tabs[(current + offset + tabs.length) % tabs.length];
+        next.focus();
+        activateTab(next);
+      }
+    });
+
+    document.getElementById("character-input").addEventListener("input", renderCosts);
+
+    fetch("data/tts-comparison.json", { cache: "no-store" })
+      .then(response => response.json())
+      .then(data => {
+        state.data = data;
+        state.providers = new Set(data.providers.map(provider => provider.id));
+        state.languages = new Set(data.languages.map(language => language.code));
+        render();
+      });
+  </script>
+</body>
+</html>
