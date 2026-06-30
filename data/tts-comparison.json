@@ -417,7 +417,11 @@
       "reason": "Windows SAPI MP3 export was invalid for this sample.",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "bg-BG",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target bg-BG"
     },
     {
       "lang": "hr",
@@ -428,7 +432,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "hr-HR",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target hr-HR"
     },
     {
       "lang": "cs",
@@ -439,7 +447,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "cs-CZ",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target cs-CZ"
     },
     {
       "lang": "da",
@@ -450,7 +462,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "da-DK",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target da-DK"
     },
     {
       "lang": "nl",
@@ -461,7 +477,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "nl-NL",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target nl-NL"
     },
     {
       "lang": "en",
@@ -472,7 +492,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "en-GB",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language en-GB matches target en-GB"
     },
     {
       "lang": "et",
@@ -483,7 +507,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "et-EE",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target et-EE"
     },
     {
       "lang": "fi",
@@ -494,7 +522,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "fi-FI",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target fi-FI"
     },
     {
       "lang": "fr",
@@ -505,7 +537,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "fr-FR",
+      "targetCulture": "fr-FR",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language fr-FR matches target fr-FR"
     },
     {
       "lang": "de",
@@ -516,7 +552,11 @@
       "reason": "configured GOSVI voice",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "de-DE",
+      "targetCulture": "de-DE",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language de-DE matches target de-DE"
     },
     {
       "lang": "el",
@@ -527,7 +567,11 @@
       "reason": "Windows SAPI MP3 export was invalid for this sample.",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "el-GR",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target el-GR"
     },
     {
       "lang": "hu",
@@ -538,7 +582,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "hu-HU",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target hu-HU"
     },
     {
       "lang": "ga",
@@ -549,7 +597,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "ga-IE",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target ga-IE"
     },
     {
       "lang": "it",
@@ -560,7 +612,11 @@
       "reason": "configured GOSVI voice",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "it-IT",
+      "targetCulture": "it-IT",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language it-IT matches target it-IT"
     },
     {
       "lang": "lv",
@@ -571,7 +627,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "lv-LV",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target lv-LV"
     },
     {
       "lang": "lt",
@@ -582,7 +642,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "lt-LT",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target lt-LT"
     },
     {
       "lang": "mt",
@@ -593,7 +657,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "mt-MT",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target mt-MT"
     },
     {
       "lang": "pl",
@@ -604,7 +672,11 @@
       "reason": "configured GOSVI voice",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "pl-PL",
+      "targetCulture": "pl-PL",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language pl-PL matches target pl-PL"
     },
     {
       "lang": "pt",
@@ -615,7 +687,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "pt-PT",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target pt-PT"
     },
     {
       "lang": "ro",
@@ -626,7 +702,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "ro-RO",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target ro-RO"
     },
     {
       "lang": "sk",
@@ -637,7 +717,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "sk-SK",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target sk-SK"
     },
     {
       "lang": "sl",
@@ -648,7 +732,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "sl-SI",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target sl-SI"
     },
     {
       "lang": "es",
@@ -659,7 +747,11 @@
       "reason": "configured GOSVI voice",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "es-ES",
+      "targetCulture": "es-ES",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language es-ES matches target es-ES"
     },
     {
       "lang": "sv",
@@ -670,7 +762,11 @@
       "reason": "fallback default; configured voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "sv-SE",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target sv-SE"
     },
     {
       "lang": "bg",
@@ -681,7 +777,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "bg-BG",
+      "targetCulture": "bg-BG",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language bg-BG matches target bg-BG"
     },
     {
       "lang": "hr",
@@ -692,7 +792,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "hr-HR",
+      "targetCulture": "hr-HR",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language hr-HR matches target hr-HR"
     },
     {
       "lang": "cs",
@@ -703,7 +807,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "cs-CZ",
+      "targetCulture": "cs-CZ",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language cs-CZ matches target cs-CZ"
     },
     {
       "lang": "da",
@@ -714,7 +822,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "da-DK",
+      "targetCulture": "da-DK",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language da-DK matches target da-DK"
     },
     {
       "lang": "nl",
@@ -725,7 +837,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "nl-NL",
+      "targetCulture": "nl-NL",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language nl-NL matches target nl-NL"
     },
     {
       "lang": "en",
@@ -736,7 +852,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "en-GB",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language en-GB matches target en-GB"
     },
     {
       "lang": "et",
@@ -747,7 +867,11 @@
       "reason": "fallback default; matching OneCore voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "et-EE",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target et-EE"
     },
     {
       "lang": "fi",
@@ -758,7 +882,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "fi-FI",
+      "targetCulture": "fi-FI",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language fi-FI matches target fi-FI"
     },
     {
       "lang": "fr",
@@ -769,7 +897,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "fr-FR",
+      "targetCulture": "fr-FR",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language fr-FR matches target fr-FR"
     },
     {
       "lang": "de",
@@ -780,7 +912,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "de-DE",
+      "targetCulture": "de-DE",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language de-DE matches target de-DE"
     },
     {
       "lang": "el",
@@ -791,7 +927,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "el-GR",
+      "targetCulture": "el-GR",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language el-GR matches target el-GR"
     },
     {
       "lang": "hu",
@@ -802,7 +942,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "hu-HU",
+      "targetCulture": "hu-HU",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language hu-HU matches target hu-HU"
     },
     {
       "lang": "ga",
@@ -813,7 +957,11 @@
       "reason": "fallback default; matching OneCore voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "ga-IE",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target ga-IE"
     },
     {
       "lang": "it",
@@ -824,7 +972,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "it-IT",
+      "targetCulture": "it-IT",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language it-IT matches target it-IT"
     },
     {
       "lang": "lv",
@@ -835,7 +987,11 @@
       "reason": "fallback default; matching OneCore voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "lv-LV",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target lv-LV"
     },
     {
       "lang": "lt",
@@ -846,7 +1002,11 @@
       "reason": "fallback default; matching OneCore voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "lt-LT",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target lt-LT"
     },
     {
       "lang": "mt",
@@ -857,7 +1017,11 @@
       "reason": "fallback default; matching OneCore voice missing",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "en-GB",
+      "targetCulture": "mt-MT",
+      "voiceMatchesTargetCulture": false,
+      "voiceLanguageNote": "Fallback voice language en-GB for target mt-MT"
     },
     {
       "lang": "pl",
@@ -868,7 +1032,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "pl-PL",
+      "targetCulture": "pl-PL",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language pl-PL matches target pl-PL"
     },
     {
       "lang": "pt",
@@ -879,7 +1047,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "pt-PT",
+      "targetCulture": "pt-PT",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language pt-PT matches target pt-PT"
     },
     {
       "lang": "ro",
@@ -890,7 +1062,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "ro-RO",
+      "targetCulture": "ro-RO",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language ro-RO matches target ro-RO"
     },
     {
       "lang": "sk",
@@ -901,7 +1077,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "sk-SK",
+      "targetCulture": "sk-SK",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language sk-SK matches target sk-SK"
     },
     {
       "lang": "sl",
@@ -912,7 +1092,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "sl-SI",
+      "targetCulture": "sl-SI",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language sl-SI matches target sl-SI"
     },
     {
       "lang": "es",
@@ -923,7 +1107,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "es-ES",
+      "targetCulture": "es-ES",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language es-ES matches target es-ES"
     },
     {
       "lang": "sv",
@@ -934,7 +1122,11 @@
       "reason": "matching culture",
       "model": null,
       "costUsd": null,
-      "characterCost": null
+      "characterCost": null,
+      "voiceCulture": "sv-SE",
+      "targetCulture": "sv-SE",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Voice language sv-SE matches target sv-SE"
     },
     {
       "lang": "bg",

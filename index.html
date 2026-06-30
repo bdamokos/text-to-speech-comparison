@@ -289,6 +289,26 @@
       overflow-wrap: anywhere;
     }
 
+    .voice-culture {
+      margin-top: 7px;
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+      border: 1px solid rgba(203, 210, 196, .9);
+      background: rgba(255, 253, 247, .72);
+      color: var(--muted);
+    }
+
+    .voice-culture strong {
+      color: var(--ink);
+    }
+
+    .voice-culture.fallback {
+      border-color: rgba(163, 71, 47, .42);
+      background: rgba(163, 71, 47, .08);
+    }
+
     .cost-layout {
       display: grid;
       gap: 16px;
@@ -488,6 +508,26 @@
       return Number(language.characters || 0) / 1_000_000 * providerRate(provider);
     }
 
+    function audioLabel(provider, language, sample) {
+      const parts = [`${provider.label} sample for ${language.language}`];
+      if (sample?.voice) parts.push(`voice ${sample.voice}`);
+      if (sample?.voiceCulture) {
+        parts.push(sample.voiceMatchesTargetCulture
+          ? `voice language ${sample.voiceCulture} matches target ${sample.targetCulture}`
+          : `fallback voice language ${sample.voiceCulture}, target ${sample.targetCulture}`);
+      }
+      return parts.join(", ");
+    }
+
+    function voiceCultureMarkup(sample) {
+      if (!sample?.voiceCulture || !sample?.targetCulture) return "";
+      const label = sample.voiceMatchesTargetCulture ? "Voice language matches" : "Fallback voice language";
+      const detail = sample.voiceMatchesTargetCulture
+        ? `${sample.voiceCulture} matches target ${sample.targetCulture}`
+        : `${sample.voiceCulture} → target ${sample.targetCulture}`;
+      return `<div class="voice-culture ${sample.voiceMatchesTargetCulture ? "match" : "fallback"}"><strong>${escapeHtml(label)}:</strong> ${escapeHtml(detail)}</div>`;
+    }
+
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
     }
@@ -546,10 +586,10 @@
           const cost = sampleCost(sample, provider, language);
           const badge = isOk ? (cost ? money.format(cost) : "$0") : "Unavailable";
           const body = isOk
-            ? `<audio controls preload="metadata" src="${escapeHtml(sample.file)}" aria-label="${escapeHtml(provider.label)} sample for ${escapeHtml(language.language)}"></audio>`
+            ? `<audio controls preload="metadata" src="${escapeHtml(sample.file)}" aria-label="${escapeHtml(audioLabel(provider, language, sample))}"></audio>`
             : `<div class="meta">${escapeHtml(sample?.reason || "No sample available for this provider and language.")}</div>`;
           const metaParts = [sample?.voice, provider.engine].filter(Boolean);
-          return `<div class="sample-card ${isOk ? "" : "missing"}"><div class="provider-line"><strong>${escapeHtml(providerById[provider.id].label)}</strong><span class="badge">${escapeHtml(badge)}</span></div>${body}<div class="meta">${escapeHtml(metaParts.join(" · "))}</div></div>`;
+          return `<div class="sample-card ${isOk ? "" : "missing"}"><div class="provider-line"><strong>${escapeHtml(providerById[provider.id].label)}</strong><span class="badge">${escapeHtml(badge)}</span></div>${body}${voiceCultureMarkup(sample)}<div class="meta">${escapeHtml(metaParts.join(" · "))}</div></div>`;
         }).join("");
         return `<article class="language"><div class="language-head"><div><h2>${escapeHtml(language.language)} <span class="code">${escapeHtml(language.code)}</span></h2><p class="sample-text">${escapeHtml(language.sampleText)}</p></div><div class="char-count">${whole.format(language.characters)} chars</div></div><div class="samples">${cards}</div></article>`;
       }).join("");
