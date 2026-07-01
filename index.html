@@ -521,19 +521,32 @@
       if (sample?.voice) parts.push(`voice ${sample.voice}`);
       if (sample?.voiceCulture) {
         parts.push(sample.voiceMatchesTargetCulture
-          ? `voice language ${sample.voiceCulture} matches target ${sample.targetCulture}`
-          : `fallback voice language ${sample.voiceCulture}, target ${sample.targetCulture}`);
+          ? `voice language ${sample.voiceCulture} for ${sample.targetCulture}`
+          : `voice language ${sample.voiceCulture} for ${sample.targetCulture}`);
       }
       return parts.join(", ");
     }
 
     function voiceCultureMarkup(sample) {
+      if (sample?.status !== "ok") return "";
       if (!sample?.voiceCulture || !sample?.targetCulture) return "";
-      const label = sample.voiceMatchesTargetCulture ? "Voice language matches" : "Fallback voice language";
+      const label = sample.voiceMatchesTargetCulture ? "Voice language" : "Voice language mismatch";
       const detail = sample.voiceMatchesTargetCulture
-        ? `${sample.voiceCulture} matches target ${sample.targetCulture}`
-        : `${sample.voiceCulture} → target ${sample.targetCulture}`;
+        ? `${sample.voiceCulture} for ${sample.targetCulture}`
+        : `${sample.voiceCulture} for ${sample.targetCulture}`;
       return `<div class="voice-culture ${sample.voiceMatchesTargetCulture ? "match" : "fallback"}"><strong>${escapeHtml(label)}:</strong> ${escapeHtml(detail)}</div>`;
+    }
+
+    function benchmarkText(provider) {
+      const benchmark = provider?.localBenchmark;
+      if (!benchmark) return "";
+      const pieces = [];
+      if (Number.isFinite(Number(benchmark.totalSeconds))) pieces.push(`total ${Number(benchmark.totalSeconds).toFixed(1)}s`);
+      if (Number.isFinite(Number(benchmark.loadSeconds))) pieces.push(`load ${Number(benchmark.loadSeconds).toFixed(1)}s`);
+      if (Number.isFinite(Number(benchmark.generationSeconds))) pieces.push(`gen ${Number(benchmark.generationSeconds).toFixed(1)}s`);
+      if (Number.isFinite(Number(benchmark.realtimeFactor))) pieces.push(`${Number(benchmark.realtimeFactor).toFixed(2)}x RT`);
+      if (benchmark.status && benchmark.status !== "ok") pieces.push(benchmark.status);
+      return pieces.length ? `MacBook Air benchmark: ${pieces.join(", ")}` : "";
     }
 
     function escapeHtml(value) {
@@ -596,7 +609,7 @@
           const body = isOk
             ? `<audio controls preload="metadata" src="${escapeHtml(sample.file)}" aria-label="${escapeHtml(audioLabel(provider, language, sample))}"></audio>`
             : `<div class="meta">${escapeHtml(sample?.reason || "No sample available for this provider and language.")}</div>`;
-          const metaParts = [sample?.voice, provider.engine].filter(Boolean);
+          const metaParts = [sample?.voice, provider.engine, benchmarkText(provider)].filter(Boolean);
           return `<div class="sample-card ${isOk ? "" : "missing"}"><div class="provider-line"><strong>${escapeHtml(providerById[provider.id].label)}</strong><span class="badge">${escapeHtml(badge)}</span></div>${body}${voiceCultureMarkup(sample)}<div class="meta">${escapeHtml(metaParts.join(" · "))}</div></div>`;
         }).join("");
         return `<article class="language"><div class="language-head"><div><h2>${escapeHtml(language.language)} <span class="code">${escapeHtml(language.code)}</span></h2><p class="sample-text">${escapeHtml(language.sampleText)}</p></div><div class="char-count">${whole.format(language.characters)} chars</div></div><div class="samples">${cards}</div></article>`;
