@@ -84,7 +84,8 @@
         "fish-s2-pro-mlx",
         "omnivoice",
         "voxtral-mlx",
-        "xtts-v2"
+        "xtts-v2",
+        "cosyvoice2"
       ]
     },
     {
@@ -837,6 +838,40 @@
           "it",
           "pl",
           "pt",
+          "es"
+        ]
+      }
+    },
+    {
+      "id": "cosyvoice2",
+      "label": "CosyVoice2 0.5B",
+      "group": "local-llm",
+      "engine": "Local FunAudioLLM CosyVoice2 0.5B large-language-model streaming TTS with zero-shot voice cloning via PyTorch CPU",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local open-weights model; Apache-2.0 code and model repository license",
+        "sampleCharacters": 92
+      },
+      "localBenchmark": {
+        "hardware": "MacBook Air Mac15,12, Apple M3, 24 GB RAM",
+        "measuredAt": "2026-07-01T21:32:36+02:00",
+        "sampleLanguage": "en",
+        "sampleTextCharacters": 92,
+        "status": "ok",
+        "audioDurationSeconds": 5.76,
+        "loadSeconds": 7.657215500017628,
+        "generationSeconds": 13.295397499925457,
+        "totalSeconds": 20.952612999943085,
+        "realtimeFactor": 2.3082287326259476,
+        "method": "Cached local FunAudioLLM/CosyVoice2-0.5B run on this MacBook Air; model download excluded. English GOSVI prompt, 92 characters, synthetic OmniVoice English reference, CosyVoice2 zero-shot inference with load_jit/load_trt/load_vllm/fp16 disabled.",
+        "notes": "CosyVoice2 is LLM-based and officially lists Chinese, English, Japanese, Korean, German, Spanish, French, Italian, and Russian. Five languages overlap with this app. The Mac path ran CPU-only even though MPS was available; English and German were about 2.3x real time, while Italian and Spanish were much slower.",
+        "supportedAppLanguages": [
+          "en",
+          "de",
+          "fr",
+          "it",
           "es"
         ]
       }
@@ -7480,6 +7515,290 @@
       "voice": "",
       "reason": "XTTS-v2 does not list this target language among its supported languages in the tested local runtime.",
       "model": "tts_models/multilingual/multi-dataset/xtts_v2 / coqui/XTTS-v2",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "en",
+      "provider": "cosyvoice2",
+      "status": "ok",
+      "file": "audio/cosyvoice2-en.mp3",
+      "voice": "synthetic OmniVoice English reference clone",
+      "reason": "Generated locally with CosyVoice2 zero-shot inference using the matching target language and checked for file validity.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "en-GB",
+      "targetCulture": "en-GB",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated language en-GB matches target en-GB"
+    },
+    {
+      "lang": "et",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "cosyvoice2",
+      "status": "ok",
+      "file": "audio/cosyvoice2-fr.mp3",
+      "voice": "synthetic OmniVoice English reference clone",
+      "reason": "Generated locally with CosyVoice2 zero-shot inference using the matching target language and checked for file validity.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "fr-FR",
+      "targetCulture": "fr-FR",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated language fr-FR matches target fr-FR"
+    },
+    {
+      "lang": "de",
+      "provider": "cosyvoice2",
+      "status": "ok",
+      "file": "audio/cosyvoice2-de.mp3",
+      "voice": "synthetic OmniVoice English reference clone",
+      "reason": "Generated locally with CosyVoice2 zero-shot inference using the matching target language and checked for file validity.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "de-DE",
+      "targetCulture": "de-DE",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated language de-DE matches target de-DE"
+    },
+    {
+      "lang": "el",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "cosyvoice2",
+      "status": "ok",
+      "file": "audio/cosyvoice2-it.mp3",
+      "voice": "synthetic OmniVoice English reference clone",
+      "reason": "Generated locally with CosyVoice2 zero-shot inference using the matching target language and checked for file validity.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "it-IT",
+      "targetCulture": "it-IT",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated language it-IT matches target it-IT"
+    },
+    {
+      "lang": "lv",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ro",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "cosyvoice2",
+      "status": "ok",
+      "file": "audio/cosyvoice2-es.mp3",
+      "voice": "synthetic OmniVoice English reference clone",
+      "reason": "Generated locally with CosyVoice2 zero-shot inference using the matching target language and checked for file validity.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "es-ES",
+      "targetCulture": "es-ES",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated language es-ES matches target es-ES"
+    },
+    {
+      "lang": "sv",
+      "provider": "cosyvoice2",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "CosyVoice2-0.5B does not list this target language among its supported languages in the tested local runtime.",
+      "model": "FunAudioLLM/CosyVoice2-0.5B",
       "costUsd": null,
       "characterCost": null
     }
