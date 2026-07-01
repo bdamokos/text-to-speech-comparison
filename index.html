@@ -317,7 +317,7 @@
     .calculator {
       padding: 16px;
       display: grid;
-      grid-template-columns: minmax(220px, 340px) repeat(3, minmax(150px, 1fr));
+      grid-template-columns: minmax(220px, 340px) repeat(2, minmax(150px, 1fr));
       gap: 12px;
       align-items: end;
     }
@@ -457,12 +457,11 @@
         <div class="cost-layout">
           <section class="panel calculator">
             <label class="input-label">
-              Characters to estimate
+              Characters to estimate (total for all languages)
               <input id="character-input" type="number" min="0" step="1000" value="1000000">
             </label>
             <div class="metric" role="status" aria-live="polite"><span id="sample-cost-label">Selected sample set</span><strong id="sample-cost" aria-labelledby="sample-cost-label">$0.00</strong></div>
-            <div class="metric" role="status" aria-live="polite"><span id="calculator-cost-label">Calculator total</span><strong id="calculator-cost" aria-labelledby="calculator-cost-label">$0.00</strong></div>
-            <div class="metric"><span id="coverage-count-label">Playable samples</span><strong id="coverage-count" aria-labelledby="coverage-count-label">0</strong></div>
+            <div class="metric" role="status" aria-live="polite"><span id="calculator-cost-label">Calculator range</span><strong id="calculator-cost" aria-labelledby="calculator-cost-label">$0.00</strong></div>
           </section>
           <div id="cost-table"></div>
         </div>
@@ -506,6 +505,15 @@
       if (sample.costUsd != null) return Number(sample.costUsd);
       if (sample.characterCost != null) return Number(sample.characterCost) / 1_000_000 * providerRate(provider);
       return Number(language.characters || 0) / 1_000_000 * providerRate(provider);
+    }
+
+    function moneyRange(values) {
+      const costs = values.filter(value => Number.isFinite(value));
+      if (!costs.length) return money.format(0);
+      const low = Math.min(...costs);
+      const high = Math.max(...costs);
+      if (low === high) return money.format(low);
+      return `${money.format(low)} - ${money.format(high)}`;
     }
 
     function audioLabel(provider, language, sample) {
@@ -601,16 +609,13 @@
       const characters = Math.max(0, Number(document.getElementById("character-input").value || 0));
       const rows = providers.map(provider => {
         let sampleTotal = 0;
-        let playable = 0;
         for (const language of languages) {
           const sample = sampleFor(language.code, provider.id);
-          if (sample?.status === "ok") playable += 1;
           sampleTotal += sampleCost(sample, provider, language);
         }
         const millionRate = providerRate(provider);
         return {
           provider,
-          playable,
           sampleTotal,
           millionRate,
           calculatorCost: characters / 1_000_000 * millionRate
@@ -618,13 +623,10 @@
       });
 
       const sampleTotal = rows.reduce((sum, row) => sum + row.sampleTotal, 0);
-      const calculatorTotal = rows.reduce((sum, row) => sum + row.calculatorCost, 0);
-      const playableTotal = rows.reduce((sum, row) => sum + row.playable, 0);
       document.getElementById("sample-cost").textContent = money.format(sampleTotal);
-      document.getElementById("calculator-cost").textContent = money.format(calculatorTotal);
-      document.getElementById("coverage-count").textContent = whole.format(playableTotal);
+      document.getElementById("calculator-cost").textContent = moneyRange(rows.map(row => row.calculatorCost));
 
-      document.getElementById("cost-table").innerHTML = `<table><caption class="sr-only">Cost estimates for selected providers and languages</caption><thead><tr><th scope="col">Provider</th><th scope="col">Cost basis</th><th scope="col" class="num">Playable</th><th scope="col" class="num">Selected sample</th><th scope="col" class="num">Per 1M chars</th><th scope="col" class="num">Calculator</th></tr></thead><tbody>${rows.map(row => `<tr><th scope="row"><strong>${escapeHtml(row.provider.label)}</strong><div class="meta">${escapeHtml(row.provider.engine)}</div></th><td>${escapeHtml(row.provider.pricing?.source || "")}</td><td class="num">${whole.format(row.playable)}</td><td class="num">${money.format(row.sampleTotal)}</td><td class="num">${money.format(row.millionRate)}</td><td class="num">${money.format(row.calculatorCost)}</td></tr>`).join("")}</tbody></table>`;
+      document.getElementById("cost-table").innerHTML = `<table><caption class="sr-only">Cost estimates for selected providers and languages</caption><thead><tr><th scope="col">Provider</th><th scope="col">Cost basis</th><th scope="col" class="num">Selected sample</th><th scope="col" class="num">Per 1M chars</th><th scope="col" class="num">Calculator</th></tr></thead><tbody>${rows.map(row => `<tr><th scope="row"><strong>${escapeHtml(row.provider.label)}</strong><div class="meta">${escapeHtml(row.provider.engine)}</div></th><td>${escapeHtml(row.provider.pricing?.source || "")}</td><td class="num">${money.format(row.sampleTotal)}</td><td class="num">${money.format(row.millionRate)}</td><td class="num">${money.format(row.calculatorCost)}</td></tr>`).join("")}</tbody></table>`;
     }
 
     function activateTab(button) {
