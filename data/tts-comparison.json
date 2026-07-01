@@ -86,7 +86,8 @@
         "voxtral-mlx",
         "xtts-v2",
         "cosyvoice2",
-        "magpie-tts"
+        "magpie-tts",
+        "vibevoice-realtime"
       ]
     },
     {
@@ -908,6 +909,117 @@
           "fr",
           "it",
           "es"
+        ]
+      }
+    },
+    {
+      "id": "vibevoice-realtime",
+      "label": "VibeVoice Realtime 0.5B",
+      "group": "local-llm",
+      "engine": "Local Microsoft VibeVoice-Realtime-0.5B Qwen2.5-0.5B LLM plus acoustic-tokenizer/diffusion realtime TTS via PyTorch MPS",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local model; MIT license",
+        "sampleCharacters": 92
+      },
+      "localBenchmark": {
+        "hardware": "MacBook Air Mac15,12, Apple M3, 24 GB RAM",
+        "measuredAt": "2026-07-01T22:09:00+02:00",
+        "sampleLanguage": "en",
+        "sampleTextCharacters": 92,
+        "status": "ok",
+        "audioDurationSeconds": 6.4,
+        "loadSeconds": 6.849424957996234,
+        "generationSeconds": 10.2562059169868,
+        "totalSeconds": 17.105630874983035,
+        "realtimeFactor": 1.6025321745291876,
+        "method": "Cached local microsoft/VibeVoice-Realtime-0.5B run through the Microsoft VibeVoice repo on this MacBook Air; model download excluded. English GOSVI prompt, 92 characters, speaker prompt en-Carter_man, PyTorch MPS, cfgScale=1.5, ddpmInferenceSteps=5. Temporary demo loader patch used weights_only=false for trusted bundled .pt speaker prompts on PyTorch 2.12.",
+        "notes": "VibeVoice Realtime is an LLM-based streaming TTS model built on Qwen2.5-0.5B plus acoustic-tokenizer/diffusion audio generation. The model card describes English as primary and non-English as experimental, so playable rows here are limited to languages generated with matching bundled speaker prompts and checked with Whisper tiny language detection. Word-level fidelity was imperfect in several non-English clips; generation was slower than real time on this MacBook Air.",
+        "supportedAppLanguages": [
+          "en",
+          "de",
+          "fr",
+          "it",
+          "nl",
+          "pl",
+          "pt",
+          "es"
+        ],
+        "languageBenchmarks": [
+          {
+            "lang": "en",
+            "voice": "en-Carter_man",
+            "generationSeconds": 10.2562059169868,
+            "audioDurationSeconds": 6.4,
+            "realtimeFactor": 1.6025321745291876,
+            "generatedSpeechTokens": 48,
+            "whisperTinyDetectedLanguage": "en"
+          },
+          {
+            "lang": "de",
+            "voice": "de-Spk0_man",
+            "generationSeconds": 8.01956483302638,
+            "audioDurationSeconds": 5.466666666666667,
+            "realtimeFactor": 1.4669935670170207,
+            "generatedSpeechTokens": 42,
+            "whisperTinyDetectedLanguage": "de"
+          },
+          {
+            "lang": "fr",
+            "voice": "fr-Spk0_man",
+            "generationSeconds": 11.539385249954648,
+            "audioDurationSeconds": 7.333333333333333,
+            "realtimeFactor": 1.5735525340847247,
+            "generatedSpeechTokens": 60,
+            "whisperTinyDetectedLanguage": "fr"
+          },
+          {
+            "lang": "it",
+            "voice": "it-Spk0_woman",
+            "generationSeconds": 10.812173667014576,
+            "audioDurationSeconds": 7.066666666666666,
+            "realtimeFactor": 1.5300245755209307,
+            "generatedSpeechTokens": 54,
+            "whisperTinyDetectedLanguage": "it"
+          },
+          {
+            "lang": "nl",
+            "voice": "nl-Spk0_man",
+            "generationSeconds": 7.662631458952092,
+            "audioDurationSeconds": 4.8,
+            "realtimeFactor": 1.5963815539483526,
+            "generatedSpeechTokens": 36,
+            "whisperTinyDetectedLanguage": "nl"
+          },
+          {
+            "lang": "pl",
+            "voice": "pl-Spk0_man",
+            "generationSeconds": 12.048372625024058,
+            "audioDurationSeconds": 7.066666666666666,
+            "realtimeFactor": 1.7049583903335932,
+            "generatedSpeechTokens": 54,
+            "whisperTinyDetectedLanguage": "pl"
+          },
+          {
+            "lang": "pt",
+            "voice": "pt-Spk0_woman",
+            "generationSeconds": 12.514617000008002,
+            "audioDurationSeconds": 6.266666666666667,
+            "realtimeFactor": 1.9970133510651067,
+            "generatedSpeechTokens": 48,
+            "whisperTinyDetectedLanguage": "pt"
+          },
+          {
+            "lang": "es",
+            "voice": "sp-Spk0_woman",
+            "generationSeconds": 14.355568167055026,
+            "audioDurationSeconds": 6.933333333333334,
+            "realtimeFactor": 2.0705146394790903,
+            "generatedSpeechTokens": 54,
+            "whisperTinyDetectedLanguage": "es"
+          }
         ]
       }
     }
@@ -8118,6 +8230,294 @@
       "voice": "",
       "reason": "MagpieTTS Multilingual 357M does not list this target language among its supported languages in the tested local runtime.",
       "model": "nvidia/magpie_tts_multilingual_357m",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "bg",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-nl.mp3",
+      "voice": "nl-Spk0_man",
+      "voiceCulture": "nl-NL",
+      "targetCulture": "nl-NL",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled nl-Spk0_man speaker prompt and checked with Whisper tiny language detection as nl.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "en",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-en.mp3",
+      "voice": "en-Carter_man",
+      "voiceCulture": "en-GB",
+      "targetCulture": "en-GB",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled en-Carter_man speaker prompt and checked with Whisper tiny language detection as en.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "et",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-fr.mp3",
+      "voice": "fr-Spk0_man",
+      "voiceCulture": "fr-FR",
+      "targetCulture": "fr-FR",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled fr-Spk0_man speaker prompt and checked with Whisper tiny language detection as fr.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "de",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-de.mp3",
+      "voice": "de-Spk0_man",
+      "voiceCulture": "de-DE",
+      "targetCulture": "de-DE",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled de-Spk0_man speaker prompt and checked with Whisper tiny language detection as de.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "el",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-it.mp3",
+      "voice": "it-Spk0_woman",
+      "voiceCulture": "it-IT",
+      "targetCulture": "it-IT",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled it-Spk0_woman speaker prompt and checked with Whisper tiny language detection as it.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "lv",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-pl.mp3",
+      "voice": "pl-Spk0_man",
+      "voiceCulture": "pl-PL",
+      "targetCulture": "pl-PL",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled pl-Spk0_man speaker prompt and checked with Whisper tiny language detection as pl.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "pt",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-pt.mp3",
+      "voice": "pt-Spk0_woman",
+      "voiceCulture": "pt-PT",
+      "targetCulture": "pt-PT",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled pt-Spk0_woman speaker prompt and checked with Whisper tiny language detection as pt.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "ro",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "vibevoice-realtime",
+      "status": "ok",
+      "file": "audio/vibevoice-realtime-es.mp3",
+      "voice": "sp-Spk0_woman",
+      "voiceCulture": "es-ES",
+      "targetCulture": "es-ES",
+      "voiceMatchesTargetCulture": true,
+      "reason": "Generated locally with VibeVoice Realtime using bundled sp-Spk0_woman speaker prompt and checked with Whisper tiny language detection as es.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
+      "costUsd": 0,
+      "characterCost": 0
+    },
+    {
+      "lang": "sv",
+      "provider": "vibevoice-realtime",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "VibeVoice-Realtime-0.5B does not provide a matching bundled experimental speaker prompt for this app language in the tested local runtime.",
+      "model": "microsoft/VibeVoice-Realtime-0.5B",
       "costUsd": null,
       "characterCost": null
     }
