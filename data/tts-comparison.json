@@ -82,7 +82,8 @@
         "voxcpm2",
         "moss-tts-nano",
         "fish-s2-pro-mlx",
-        "omnivoice"
+        "omnivoice",
+        "voxtral-mlx"
       ]
     },
     {
@@ -760,6 +761,42 @@
           "sl",
           "es",
           "sv"
+        ]
+      }
+    },
+    {
+      "id": "voxtral-mlx",
+      "label": "Voxtral TTS MLX",
+      "group": "local-llm",
+      "engine": "Local Mistral Voxtral 4B TTS 4-bit MLX autoregressive semantic-token + flow-matching acoustic model",
+      "pricing": {
+        "kind": "free",
+        "sampleCostUsd": 0,
+        "usdPerMillionCharacters": 0,
+        "source": "Local open-weights model; CC BY-NC 4.0 inherited from supplied voices",
+        "sampleCharacters": 92
+      },
+      "localBenchmark": {
+        "hardware": "MacBook Air Mac15,12, Apple M3, 24 GB RAM",
+        "measuredAt": "2026-07-01T20:41:31+02:00",
+        "sampleLanguage": "en",
+        "sampleTextCharacters": 92,
+        "status": "ok",
+        "audioDurationSeconds": 6.72,
+        "loadSeconds": 1.4947073750663549,
+        "generationSeconds": 8.946509207948111,
+        "totalSeconds": 10.441216583014466,
+        "realtimeFactor": 1.3313257749922784,
+        "method": "Cached local mlx-audio run on this MacBook Air; model download excluded. English GOSVI prompt, 92 characters, voice=\"casual_male\", mlx-community/Voxtral-4B-TTS-2603-mlx-4bit.",
+        "notes": "Voxtral TTS ships fixed voice presets across 9 languages; 7 overlap with this app. The local 4-bit MLX path ran successfully but slightly slower than real time for English, with Portuguese and Spanish slower outliers in this batch.",
+        "supportedAppLanguages": [
+          "nl",
+          "en",
+          "fr",
+          "de",
+          "it",
+          "pt",
+          "es"
         ]
       }
     }
@@ -6808,6 +6845,298 @@
       "targetCulture": "sv-SE",
       "voiceMatchesTargetCulture": true,
       "voiceLanguageNote": "Generated language sv-SE matches target sv-SE"
+    },
+    {
+      "lang": "bg",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hr",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "cs",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "da",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "nl",
+      "provider": "voxtral-mlx",
+      "status": "ok",
+      "file": "audio/voxtral-mlx-nl.mp3",
+      "voice": "nl_male",
+      "reason": "Generated locally with Voxtral TTS MLX using the matching preset language voice and checked for file validity.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "nl-NL",
+      "targetCulture": "nl-NL",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated preset voice nl_male matches target nl-NL"
+    },
+    {
+      "lang": "en",
+      "provider": "voxtral-mlx",
+      "status": "ok",
+      "file": "audio/voxtral-mlx-en.mp3",
+      "voice": "casual_male",
+      "reason": "Generated locally with Voxtral TTS MLX using the matching preset language voice and checked for file validity.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "en-GB",
+      "targetCulture": "en-GB",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated preset voice casual_male matches target en-GB"
+    },
+    {
+      "lang": "et",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fi",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "fr",
+      "provider": "voxtral-mlx",
+      "status": "ok",
+      "file": "audio/voxtral-mlx-fr.mp3",
+      "voice": "fr_male",
+      "reason": "Generated locally with Voxtral TTS MLX using the matching preset language voice and checked for file validity.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "fr-FR",
+      "targetCulture": "fr-FR",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated preset voice fr_male matches target fr-FR"
+    },
+    {
+      "lang": "de",
+      "provider": "voxtral-mlx",
+      "status": "ok",
+      "file": "audio/voxtral-mlx-de.mp3",
+      "voice": "de_male",
+      "reason": "Generated locally with Voxtral TTS MLX using the matching preset language voice and checked for file validity.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "de-DE",
+      "targetCulture": "de-DE",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated preset voice de_male matches target de-DE"
+    },
+    {
+      "lang": "el",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "hu",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "ga",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "it",
+      "provider": "voxtral-mlx",
+      "status": "ok",
+      "file": "audio/voxtral-mlx-it.mp3",
+      "voice": "it_male",
+      "reason": "Generated locally with Voxtral TTS MLX using the matching preset language voice and checked for file validity.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "it-IT",
+      "targetCulture": "it-IT",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated preset voice it_male matches target it-IT"
+    },
+    {
+      "lang": "lv",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "lt",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "mt",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pl",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "pt",
+      "provider": "voxtral-mlx",
+      "status": "ok",
+      "file": "audio/voxtral-mlx-pt.mp3",
+      "voice": "pt_male",
+      "reason": "Generated locally with Voxtral TTS MLX using the matching preset language voice and checked for file validity.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "pt-PT",
+      "targetCulture": "pt-PT",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated preset voice pt_male matches target pt-PT"
+    },
+    {
+      "lang": "ro",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sk",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "sl",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
+    },
+    {
+      "lang": "es",
+      "provider": "voxtral-mlx",
+      "status": "ok",
+      "file": "audio/voxtral-mlx-es.mp3",
+      "voice": "es_male",
+      "reason": "Generated locally with Voxtral TTS MLX using the matching preset language voice and checked for file validity.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": 0,
+      "characterCost": 0,
+      "voiceCulture": "es-ES",
+      "targetCulture": "es-ES",
+      "voiceMatchesTargetCulture": true,
+      "voiceLanguageNote": "Generated preset voice es_male matches target es-ES"
+    },
+    {
+      "lang": "sv",
+      "provider": "voxtral-mlx",
+      "status": "missing",
+      "file": null,
+      "voice": "",
+      "reason": "Voxtral TTS MLX shipped preset voices were not available for this target language in the tested local runtime.",
+      "model": "mlx-community/Voxtral-4B-TTS-2603-mlx-4bit from mistralai/Voxtral-4B-TTS-2603",
+      "costUsd": null,
+      "characterCost": null
     }
   ],
   "costs": {
